@@ -74,7 +74,7 @@ def get_filters():
         while choice == '':
             answer = input(
                 '\nDo you wish to analyze data for the city of {} for {}s in {}? \n(Type "Y" to proceed or "N" '
-                'to start over)'.format(city.title(), print_day, print_month)).upper()
+                'to start over): '.format(city.title(), print_day, print_month)).upper()
             if answer == 'Y':
                 choice = answer
                 print('-' * 40)
@@ -138,7 +138,7 @@ def raw_data(df, city):
     while rd_answer == 'y':
         if x == 0:
             rd_answer = input('Would you like to see raw data from the specified period for {}? \n("Y" to review data'
-                              'or "N" to skip)'.format(city.title())).lower()
+                              ' or "N" to skip): '.format(city.title())).lower()
         else:
             rd_answer = input('\nWould you like to see the next 5 lines of raw data?\n'
                               '("Y" to continue or "N" to skip)')
@@ -189,7 +189,7 @@ def time_stats(df, month, day):
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
-    print('\nCalculating The Most Popular Stations and Trip...\n')
+    print('\nCalculating The Most Popular Stations and Trips...\n')
     start_time = time.time()
 
     # display most commonly used start station
