@@ -193,8 +193,7 @@ def time_stats(df, month, day):
         hour_end = 0
     print('The most common hour for rentals is between {} '
           'and {}'.format(hour_dict[hour_mode], hour_dict[hour_end]))
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %.4fs seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -221,7 +220,7 @@ def station_stats(df):
     print('\nThe most common trips start at the {} station \nand end at the '
           '{} station.'.format(start, end))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %.4fs seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -243,7 +242,7 @@ def trip_duration_stats(df, city):
     print('The average time traveled in {} for this period is '
           '{}.'.format(city.title(), mean_time))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %.4fs seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -293,7 +292,7 @@ def user_stats(df, city):
     except KeyError:
         print('\nThere are no birth year statistics for the city of '
               '{}.'.format(city.title()))
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis took %.4fs seconds." % (time.time() - start_time))
     print('-'*40)
 
 
